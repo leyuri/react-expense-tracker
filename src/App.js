@@ -1,3 +1,4 @@
+import React from 'react';
 import "./App.css";
 import Expenses from "./components/Expenses";
 
@@ -24,14 +25,20 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      <div>
-        <Expenses items={expenses} />
-      </div>
-    </div>
-  );
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h2', {}, "Let's get started!"),
+    React.createElement(Expenses, {items: expenses})
+  )
+  // return (
+  //   <div>
+  //     <h2>Let's get started!</h2>
+  //     <div>
+  //       <Expenses items={expenses} />
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;
